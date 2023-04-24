@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-<div>Teachable Machine Pose Model</div>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+    <div>Teachable Machine Pose Model</div>
 <button type="button" onclick="init()">Start</button>
 <div><canvas id="canvas"></canvas></div>
 <div id="label-container"></div>
@@ -20,7 +15,7 @@
     // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/pose
 
     // the link to your model provided by Teachable Machine export panel
-    const URL = "./my_model/";
+    const URL = "https://teachablemachine.withgoogle.com/models/XyRoro3PHy/";
     let model, webcam, ctx, labelContainer, maxPredictions;
 
     async function init() {
@@ -86,3 +81,4 @@
         }
     }
 </script>
+  </body>
